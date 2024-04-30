@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   Card,
@@ -29,12 +30,10 @@ export function Home() {
                 color="white"
                 className="mb-6 font-black"
               >
-                Your story starts with us.
+                Faizi Art.
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-                This is a simple example of a Landing Page you can build using
-                Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
+                Write stuff about art/artist? Or slogan?- Bobac
               </Typography>
             </div>
           </div>
@@ -43,11 +42,12 @@ export function Home() {
       <section className="-mt-32 bg-white px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featuresData.map(({ color, title, icon, description }) => (
+            {featuresData.map(({ color, title, icon, image, description }) => (
               <FeatureCard
                 key={title}
                 color={color}
                 title={title}
+                image={image}
                 icon={React.createElement(icon, {
                   className: "w-5 h-5 text-white",
                 })}
@@ -165,7 +165,7 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle section="Contact Us" heading="Want to work with us?">
+                  <PageTitle section="Contact Us" heading="Want to work with us?">
             Complete this form and we will get back to you in 24 hours.
           </PageTitle>
           <form className="mx-auto w-full mt-12 lg:w-5/12">
